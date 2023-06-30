@@ -148,6 +148,40 @@
           </div>
         </div>
       </div>
+
+      <section id="my-pc">
+        <div class="container">
+          <div class="row text-center mb-4">
+            <div class="col">
+              <h2>My Computers</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="pc-box">
+                <h4 class="pc-name">Acer Aspire</h4>
+                <img src="img/pc/5.png" alt="Lenovo Legion" class="asus-img" />
+                <a href="#" class="btn btn-light pc-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="pc-box">
+                <h4 class="pc-name">Acer Nitro</h4>
+                <img src="img/pc/6.png" alt="" class="asus-img" />
+                <a href="#" class="btn btn-light pc-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="pc-box">
+                <h4 class="pc-name">Lenovo Legion</h4>
+                <img src="img/pc/4.png" alt="ASUS ROG" class="asus-img" />
+                <a href="#" class="btn btn-light pc-detail-button">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="white"
@@ -336,6 +370,15 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".pc-box"), {
+        max: 25,
+        speed: 1000,
+        glare: true,
       });
     </script>
   </body>

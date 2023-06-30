@@ -22,3 +22,93 @@ section {
 #photo .row > * {
   padding: 0;
 }
+
+/* my pc */
+.pc-box {
+  position: relative;
+  background-color: rgb(79, 79, 255);
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.pc-box::before {
+  content: "MY";
+  position: absolute;
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pc-box:hover::before {
+  opacity: 0.3;
+}
+
+.pc-box::after {
+  content: "COMPUTERS";
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pc-box:hover::after {
+  opacity: 0.3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pc-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 40px);
+  transition: 0.5s;
+}
+
+.pc-box:hover .pc-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.pc-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pc-box:hover .pc-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.asus-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 50px);
+  max-width: 280px;
+  transition: 0.5s;
+}
+
+.pc-box:hover .asus-img {
+  transform: translate3d(-50%, -50%, 50px) scale(1.3);
+}
